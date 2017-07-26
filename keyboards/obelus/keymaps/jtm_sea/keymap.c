@@ -39,19 +39,21 @@ enum planck_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
+
   /* Qwerty
    * ,-----------------------.
-   * |  7  |  8  |  9  |  *  |
+   * |  0  |  .  |  /  |  =  |
    * |-----+-----+-----+-----|
-   * |  4  |  5  |  6  |  -  |
+   * |  F9 | F10 | F11 | F12 |
    * |-----+-----+-----+-----|
-   * |  1  |  2  |  3  |  +  |
+   * |  F5 |  F6 |  F7 |  F8 |
    * |-----+-----+-----+-----|
-   * |  0  |   . |  /  |  =  |
+   * |  F1 |  F2 |  F3 |  F4 |
    * `---------------------- '
    */
 
 [0] = KEYMAP( /* Base */
+  //update top row as needed
   KC_0, KC_DOT, KC_SLSH, KC_EQL,\
   KC_F9, KC_F10, KC_F11, KC_F12, \
   KC_F5, KC_F6, KC_F7, KC_F8, \

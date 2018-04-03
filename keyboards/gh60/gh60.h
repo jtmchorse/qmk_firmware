@@ -25,6 +25,13 @@ inline void gh60_fn_led_off(void)   	{ DDRF &= ~(1<<5); PORTF &= ~(1<<5); }
 inline void gh60_esc_led_off(void)   	{ DDRF &= ~(1<<6); PORTF &= ~(1<<6); }
 inline void gh60_wasd_leds_off(void)   	{ DDRF &= ~(1<<7); PORTF &= ~(1<<7); }
 
+// inline void gh60_caps_led_on(void)    { DDRB |=  (1<<2); PORTB &= ~(1<<2); }
+// inline void gh60_bl_led_on(void)       { DDRF |=  (1<<5); PORTF &= ~(1<<5); }
+
+// inline void gh60_caps_led_off(void)   { DDRB &= ~(1<<2); PORTB &= ~(1<<2); }
+inline void gh60_bl_led_off(void)      { DDRF &= ~(1<<5); PORTF &= ~(1<<5); }
+
+
 /* GH60 keymap definition macro
  * K2C, K31 and  K3C are extra keys for ISO
  */
@@ -106,5 +113,6 @@ inline void gh60_wasd_leds_off(void)   	{ DDRF &= ~(1<<7); PORTF &= ~(1<<7); }
 #define LAYOUT_60_ansi KEYMAP_ANSI
 #define LAYOUT_60_iso KEYMAP_ISO
 #define LAYOUT_60_ansi_split_bs_rshift KEYMAP_HHKB
+#define BACKLIGHT_PIN B7
 
 #endif
